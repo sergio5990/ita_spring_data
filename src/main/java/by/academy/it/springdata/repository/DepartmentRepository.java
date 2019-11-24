@@ -27,8 +27,8 @@ public interface DepartmentRepository extends JpaRepository<Department, Long> {
             " where e.firstName = ?1", nativeQuery = true)
     List<Department> getByJoinConditionNative(String name);
 
-    @Modifying
     @Transactional
+    @Modifying
     @Query(value = "update Department set name = :name where id = :id")
     void updateName(@Param("id") Long id, @Param("name") String name);
 

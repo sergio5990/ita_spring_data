@@ -16,6 +16,7 @@ import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -24,6 +25,7 @@ import by.academy.it.springdata.entities.Department;
 import by.academy.it.springdata.entities.Employee;
 import by.academy.it.springdata.repository.DepartmentRepository;
 import by.academy.it.springdata.repository.EmployeePagingRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
